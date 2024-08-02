@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Fornecedores e Produtos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="./img/logo-vflows.png" />
+  </head>
+  <body>
+    <h1>CADASTRO FORNECEDOR/PRODUTO</h1>
+    <header>
+      <h2 class="section-title">Dados do Fornecedor</h2>
+      <form id="fornecedorForm">
+        <section class="dados-fornecedor">
+          <section>
+            <div>
+              <label for="razaoSocial">Razão Social</label>
+              <input type="text" id="razaoSocial" required />
+              <span class="error-message" id="error-razaoSocial"></span>
+            </div>
+            <div>
+              <label for="nomeFantasia">Nome Fantasia</label>
+              <input type="text" id="nomeFantasia" required />
+              <span class="error-message" id="error-nomeFantasia"></span>
+            </div>
+            <div>
+              <label for="cep">CEP</label>
+              <input type="number" id="cep" required />
+              <span class="error-message" id="error-cep"></span>
+            </div>
+            <div>
+              <label for="endereco">Endereço</label>
+              <input type="text" id="endereco" required />
+              <span class="error-message" id="error-endereco"></span>
+            </div>
+          </section>
+          <section>
+            <div>
+              <label for="cnpj">CNPJ</label>
+              <input type="number" id="cnpj" required />
+              <span class="error-message" id="error-cnpj"></span>
+            </div>
+            <div>
+              <label for="inscricaoEstadual">Inscrição Estadual</label>
+              <input type="number" id="inscricaoEstadual" />
+            </div>
+            <div>
+              <label for="inscricaoMunicipal">Inscrição Municipal</label>
+              <input type="number" id="inscricaoMunicipal" />
+            </div>
+            <div>
+              <label for="numero">Número</label>
+              <input type="number" id="numero" required />
+              <span class="error-message" id="error-numero"></span>
+            </div>
+          </section>
+        </section>
+
+        <div>
+          <label for="complemento">Complemento</label>
+          <input type="text" id="complemento" />
+        </div>
+
+        <section class="dados-fornecedor">
+          <div>
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" />
+          </div>
+          <div>
+            <label for="municipio">Municipio</label>
+            <input type="text" id="municipio" />
+          </div>
+          <div>
+            <label for="estado">Estado</label>
+            <input type="text" id="estado" />
+          </div>
+        </section>
+
+        <section class="dados-fornecedor">
+          <div>
+            <label for="contatoNome">Nome da Pessoa de Contato</label>
+            <input type="text" id="contatoNome" required /><span
+              class="error-message"
+              id="error-contatoNome"
+            ></span>
+          </div>
+          <div>
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" required />
+            <span class="error-message" id="error-telefone"></span>
+          </div>
+          <div>
+            <label for="email">E-mail</label>
+            <input type="text" id="email" required />
+            <span class="error-message" id="error-email"></span>
+          </div>
+        </section>
+      </form>
+    </header>
+
+    <main id="mainForm">
+      <h2 class="section-title">Produtos</h2>
+      <form action="">
+        <section class="produtos" id="productsContainer">
+          <section class="produto" id="produto-1">
+            <img
+              src="./img/excluir.png"
+              alt="excluir"
+              class="excluir"
+              onclick="removeProduct(1)"
+            />
+            <section class="excluir-produto">
+              <section class="excluir-pacote">
+                <span>Produto - 1</span>
+                <img src="./img/pacote.png" alt="pacote" class="pacote" />
+                <section class="produto-espicificidade">
+                  <div>
+                    <label for="produto-1">Produto</label>
+                    <input type="text" id="produto" required />
+                    <span class="error-message" id="error-produto-1"></span>
+                  </div>
+                  <section class="espicificidade">
+                    <div>
+                      <label for="unidadeMedida-1">UND. Medida</label>
+                      <select id="unidadeMedida-1" required>
+                        <option>Metro</option>
+                        <option>Metros(m)</option>
+                        <option>Centímetros(cm)</option>
+                        <option>Kilogramas(kg)</option>
+                        <option>Gramas(g)</option>
+                        <option>Litros(L)</option>
+                        <option>Mililitros(mL)</option>
+                      </select>
+                      <span
+                        class="error-message"
+                        id="error-unidadeMedida-1"
+                      ></span>
+                    </div>
+                    <div>
+                      <label for="qtdEstoque-1">QDTDE. em Estoque</label>
+                      <input type="number" id="qtdEstoque-1" required />
+                      <span
+                        class="error-message"
+                        id="error-qtdEstoque-1"
+                      ></span>
+                    </div>
+                    <div>
+                      <label for="valorUnitario-1">Valor Unitário</label>
+                      <input type="number" id="valorUnitario-1" required />
+                      <span
+                        class="error-message"
+                        id="error-valorUnitario-1"
+                      ></span>
+                    </div>
+                    <div>
+                      <label for="valorTotal-1">Valor Total</label>
+                      <input
+                        type="number"
+                        id="valorTotal-1"
+                        class="valor-total"
+                        required
+                      />
+                      <span
+                        class="error-message"
+                        id="error-valorTotal-1"
+                      ></span>
+                    </div>
+                  </section>
+                </section>
+              </section>
+            </section>
+          </section>
+        </section>
+        <button type="button" id="addProductButton" class="btn btn-primay">
+          Adicionar Produto
+        </button>
+      </form>
+    </main>
+
+    <footer id="footerForm">
+      <h2 class="section-title">Anexos</h2>
+      <form action="">
+        <section class="itens" id="attachmentsContainer">
+          <span>Itens</span>
+          <div>
+            <img
+              src="./img/excluir.png"
+              alt="excluir"
+              class="excluirAnexo"
+              onclick="removeAttachment(1)"
+            />
+            <img
+              src="./img/olho.png"
+              alt="visualizar"
+              class="visualizarAnexo"
+              onclick="viewAttachment(1)"
+            />
+            <p>Documento anexo 1</p>
+          </div>
+        </section>
+        <button type="button" id="addAttachmentButton" class="btn btn-primary">
+          Incluir Anexo
+        </button>
+      </form>
+      <button type="button" id="saveButton" class="save">
+        Salvar Fornecedor
+      </button>
+      <div id="errorMsg" margin-top: 10px;></div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
